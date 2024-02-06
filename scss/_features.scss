@@ -1,0 +1,110 @@
+.features {
+    padding: 8rem 0;
+    padding-top: 16rem;
+    position: relative;
+
+    &__decoration {
+
+        &-ring {
+            position: absolute;
+            bottom: -35rem;
+            right: -40rem;
+            z-index: -2;
+        }
+
+        &-sphere {
+            position: absolute;
+            top: 20rem;
+            left: -10rem;
+            z-index: -2;
+        }
+    }
+
+    &__margin {
+        margin-bottom: 8rem;
+    }
+
+    &__text {
+        &-paragraph {
+            font-weight: 400;
+            font-size: 2.3rem;
+            text-transform: uppercase;
+            color: #FD74A8;
+            padding-bottom: 3rem;
+        }
+
+        &-heading {
+            font-weight: 500;
+            font-size: 5rem;
+            color: #FFFFFF;
+            padding-bottom: 12rem;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__feature {
+        z-index: 3;
+        width: 40rem;
+        height: 55rem;
+        position: relative;
+        padding: 7rem 4.5rem;
+        background: rgba(127, 142, 244, 0.17);
+        border-radius: 4.5rem;
+        transition: all 0.75s ease !important;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0.1rem 0.1rem 2rem rgba(93, 129, 253, 0.08);
+
+        &:hover {
+            box-shadow: 0 1rem 3rem #5d80fd13, 0 1rem 3rem #e9a6f110;
+        }
+
+        &:hover .features__feature-bg {
+            transform: scale(8);
+        }
+
+        &-bg {
+            position: absolute;
+            top: 8%;
+            left: 10%;
+            width: 13rem;
+            height: 13rem;
+            background: linear-gradient(226.26deg, #7F8EF4 21.17%, #E9A6F1 96.82%);
+            border-radius: 3.8rem;
+            z-index: -1;
+            transition: all 0.85s ease;
+        }
+
+        &-image {
+            width: 10rem;
+            height: 10rem;
+            margin-bottom: 18rem;
+
+            &-img {
+                width: 17rem;
+                height: 17rem;
+            }
+        }
+
+        &-content {
+
+            &-heading {
+                font-weight: 600;
+                font-size: 2.6rem;
+                color: #FFFFFF;
+                padding-bottom: 3rem;
+            }
+
+            &-text {
+                font-weight: 400;
+                font-size: 2.2rem;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

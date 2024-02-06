@@ -1,0 +1,20 @@
+.portfolio {
+    height: 560rem;
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-track {
+        &__item {
+            width: 40rem;
+            margin: 5rem 0;
+            overflow: hidden;
+            border-radius: 4rem;
+            height: 100%;
+            box-shadow: 1rem 1rem 3rem rgba(93, 129, 253, 0.02);
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.booking {
+    padding: 10rem 0;
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-wrapper {
+            width: 65%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-heading {
+            text-align: center;
+            font-size: 8rem;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            color: white;
+        }
+
+        &-profile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 6rem;
+            margin-bottom: 9rem;
+            justify-content: space-between;
+
+            &-img {
+                display: block;
+                background: none;
+                width: 14rem;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+
+                &-wrapper {}
+            }
+
+            &-text {
+                margin-top: 1rem;
+                font-weight: 400;
+                font-size: 2.5rem;
+                color: rgba(255, 255, 255, 0.62);
+            }
+        }
+
+        &-btn {
+
+            &-link {
+                display: inline-block;
+                position: relative;
+                transition: all 0.85s ease;
+                padding: 3rem 8rem;
+                border-radius: 26rem;
+                font-size: 2.4rem;
+                color: #fff;
+                text-decoration: none;
+                text-align: center;
+                background: linear-gradient(93.62deg, #B07BD1 0%, #B07BD1 40%, #F375AE 100%);
+
+                &::after {
+                    content: '';
+                    width: 85%;
+                    height: 40%;
+                    background: linear-gradient(93.62deg, #B07BD1 0%, #8C7EE5 37.81%, #F375AE 100%);
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -1.5rem;
+                    margin: 0 auto;
+                    border-radius: 5rem;
+                    filter: blur(1rem);
+                    z-index: -1;
+                    opacity: 0;
+                    transition: opacity .5s ease;
+                }
+            }
+        }
+    }
+}
+
+.booking__content-btn-link:hover {
+    transform: scale(1.1);
+}
+
+.booking__content-btn-link:hover::after {
+    opacity: 0.1;
+}

@@ -1,0 +1,105 @@
+.certificates {
+    padding-bottom: 16rem;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.certificate {
+    width: 30rem;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 4.5rem;
+    transition: all 0.75s ease !important;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0.1rem 0.1rem 2rem rgba(93, 129, 253, 0.08);
+
+    &:hover {
+        box-shadow: 0 1rem 3rem #5d80fd13, 0 1rem 3rem #e9a6f110;
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(127, 142, 244, 0.17);
+        position: absolute;
+        top: 0;
+        border-radius: 4.5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transition: all 0.75s ease;
+        z-index: -1;
+    }
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 4.5rem;
+        background: linear-gradient(93.97deg, #5D81FD 0%, #E9A6F1 105.91%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.75s ease;
+        z-index: -1;
+    }
+
+    &__img {
+        display: block;
+        width: 14rem;
+    }
+}
+
+.certificate:hover::after {
+    opacity: 0;
+}
+
+.certificate:hover::before {
+    opacity: 1;
+}
+
+.google-analytics {
+    width: 16rem;
+}
+
+.semrush {
+    width: 22rem;
+}
+
+.microsoft {
+    width: 12rem;
+}
+
+.hubspot {
+    width: 22rem;
+}
+
+.ju {
+    width: 17rem;
+}
+
+.harvard {
+    width: 19rem;
+}
+
+.cfi {
+    width: 20rem;
+}

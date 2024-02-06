@@ -1,0 +1,280 @@
+.reviews {
+    position: relative;
+    padding: 8rem 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__decoration-ring {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        z-index: -1;
+    }
+}
+
+.review-bg {
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    z-index: -10;
+    width: 50rem;
+
+    &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.review {
+    width: 90%;
+    height: 31.5rem;
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+
+    &-2 {
+        width: 78%;
+        position: relative;
+        margin-top: 15rem;
+        transition: all 0.75s ease;
+        align-self: flex-end;
+        flex-direction: row-reverse;
+    }
+
+    &-3 {
+        margin-top: 15rem;
+        transition: all 0.75s ease;
+    }
+
+    &__hero {
+        width: 11.5rem;
+        height: 11.5rem;
+        margin-right: 6rem;
+        justify-self: start;
+        border-radius: 50%;
+
+        &-img {
+            width: 11.5rem;
+            height: 11.5rem;
+            border-radius: 50%;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 4.5rem;
+        transition: all 0.75s ease;
+        position: relative;
+        box-shadow: 0.1rem 0.1rem 2rem rgba(93, 129, 253, 0.08);
+
+        &:hover {
+            box-shadow: 0 1rem 3rem #5d80fd20, 0 1rem 3rem #e9a6f119;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(127, 142, 244, 0.17);
+            position: absolute;
+            top: 0;
+            border-radius: 4.5rem;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transition: all 0.75s ease;
+            z-index: -1;
+        }
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 4.5rem;
+            background: linear-gradient(93.97deg, #5D81FD 0%, #E9A6F1 105.91%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.75s ease;
+            z-index: -1;
+        }
+
+        &-decoration {
+            width: 20rem;
+            height: 20rem;
+            position: absolute;
+            top: -29%;
+            right: -7%;
+            animation: review-decoration 6.5s ease infinite;
+
+            &-img {
+                width: 20rem;
+                height: 20rem;
+            }
+        }
+
+        .review-decor-3 {
+            top: -23%;
+            right: -7%;
+            animation: review-decoration-3 6.5s ease infinite;
+        }
+
+        @keyframes review-decoration-3 {
+            0% {
+                transform: translateY(0rem);
+            }
+
+            50% {
+                transform: translateY(-2.8rem);
+            }
+
+            100% {
+                transform: translateY(0rem);
+            }
+        }
+
+        @keyframes review-decoration {
+            0% {
+                transform: translateY(0rem);
+            }
+
+            50% {
+                transform: translateY(2.8rem);
+            }
+
+            100% {
+                transform: translateY(0rem);
+            }
+        }
+
+        &-text {
+            padding: 5rem;
+            font-family: 'Fredoka';
+            font-style: normal;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            transition: all 0.75s ease;
+
+            &-heading {
+                font-weight: 500;
+                font-size: 2.8rem;
+                line-height: 2.2rem;
+                padding-bottom: 1.5rem;
+            }
+
+            &-subheading {
+                font-weight: 400;
+                font-size: 2.2rem;
+                line-height: 2.2rem;
+                color: #7A84CC;
+                padding-bottom: 3.2rem;
+            }
+
+            &-review {
+                font-weight: 400;
+                font-size: 2.2rem;
+            }
+
+            &-wrapper {
+                margin-top: 3rem;
+                position: relative;
+                transition: all 0.75s ease;
+
+                &:hover .review__content-text-button::after {
+                    width: 100% !important;
+                }
+            }
+
+            &-button {
+                position: relative;
+                font-weight: 400;
+                font-size: 2.2rem;
+                line-height: 3.1rem;
+                text-decoration: underline;
+                background: linear-gradient(90deg, #7F8EF4, #E9A6F1);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                transition: all 0.75s ease;
+                margin-right: 1rem;
+
+                &::after {
+                    transition: all 0.75s ease;
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    margin-top: 0.5rem;
+                    background: linear-gradient(90deg, #7F8EF4, #E9A6F1);
+                }
+            }
+        }
+    }
+}
+
+.review__content:hover::after {
+    opacity: 0;
+}
+
+.review__content:hover::before {
+    opacity: 1;
+}
+
+.review__content:hover .review__content-text-subheading {
+    color: white;
+}
+
+.review__content:hover .review__content-text-button {
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: all 0.75s ease;
+}
+
+.review__content:hover .review__content-text-button::after {
+    background: white;
+}
+
+.hero-2 {
+    margin-left: 6rem;
+}
+
+.review__content-2 {
+    transform: rotate(-2.5deg);
+}
+
+.review__content-human {
+    width: 50.5rem;
+    height: 37.4rem;
+    position: absolute;
+    top: -27.5%;
+    left: -56%;
+    background: url(../img/review-human.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-img {
+        width: 50.5rem;
+        height: 37.4rem;
+    }
+}

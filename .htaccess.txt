@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.anivia\.se [NC]
+RewriteRule ^(.*)$ http://anivia.se/$1 [L,R=301]
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|svg|webp|gif|js|css|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
